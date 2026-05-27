@@ -1,0 +1,256 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Herencia y Polimorfismo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Herencia y Polimorfismo</h1>
+
+        <p>
+            La Programación Orientada a Objetos (POO) es un paradigma
+            de programación que organiza el código mediante clases y objetos.
+            Dentro de este paradigma existen conceptos fundamentales
+            como la herencia y el polimorfismo.
+        </p>
+
+        <!-- HERENCIA -->
+
+        <h2>1. Herencia</h2>
+
+        <h3>¿Qué es la Herencia?</h3>
+
+        <p>
+            La herencia es un mecanismo que permite que una clase
+            obtenga atributos y métodos de otra clase.
+        </p>
+
+        <div class="caja">
+
+            <strong>Clase Padre:</strong> clase principal.<br><br>
+
+            <strong>Clase Hija:</strong> clase que hereda
+            características de la clase padre.
+
+        </div>
+
+        <h3>¿Para qué sirve?</h3>
+
+        <ul>
+            <li>Reutilizar código.</li>
+            <li>Evitar repetir instrucciones.</li>
+            <li>Organizar programas.</li>
+            <li>Facilitar mantenimiento.</li>
+        </ul>
+
+        <h3>Características de la Herencia</h3>
+
+        <table>
+
+            <tr>
+                <th>Característica</th>
+                <th>Descripción</th>
+            </tr>
+
+            <tr>
+                <td>Reutilización</td>
+                <td>Permite usar código ya creado.</td>
+            </tr>
+
+            <tr>
+                <td>Jerarquía</td>
+                <td>Organiza clases en niveles.</td>
+            </tr>
+
+            <tr>
+                <td>Extensión</td>
+                <td>Las clases hijas agregan nuevas funciones.</td>
+            </tr>
+
+        </table>
+
+        <h3>Ejemplo de Herencia</h3>
+
+<pre>
+class Animal:
+
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def hacer_sonido(self):
+        print("El animal hace un sonido")
+
+
+class Perro(Animal):
+
+    def ladrar(self):
+        print("Guau Guau")
+
+
+mi_perro = Perro("Max")
+
+print(mi_perro.nombre)
+mi_perro.hacer_sonido()
+mi_perro.ladrar()
+</pre>
+
+        <h3>Resultado</h3>
+
+<pre>
+Max
+El animal hace un sonido
+Guau Guau
+</pre>
+
+        <!-- POLIMORFISMO -->
+
+        <h2>2. Polimorfismo</h2>
+
+        <h3>¿Qué es el Polimorfismo?</h3>
+
+        <p>
+            El polimorfismo significa “muchas formas”.
+            Permite que un mismo método tenga comportamientos
+            diferentes según el objeto.
+        </p>
+
+        <div class="tarjeta">
+
+            <strong>Ejemplo:</strong><br><br>
+
+            Un perro, un gato y una vaca pueden usar
+            el método <strong>hacer_sonido()</strong>,
+            pero cada uno responde diferente.
+
+        </div>
+
+        <h3>¿Para qué sirve?</h3>
+
+        <ul>
+            <li>Hace programas más flexibles.</li>
+            <li>Mejora la reutilización.</li>
+            <li>Reduce complejidad.</li>
+            <li>Permite usar métodos iguales.</li>
+        </ul>
+
+        <h3>Características del Polimorfismo</h3>
+
+        <table>
+
+            <tr>
+                <th>Característica</th>
+                <th>Descripción</th>
+            </tr>
+
+            <tr>
+                <td>Flexibilidad</td>
+                <td>El método cambia según el objeto.</td>
+            </tr>
+
+            <tr>
+                <td>Sobrescritura</td>
+                <td>Permite modificar métodos heredados.</td>
+            </tr>
+
+            <tr>
+                <td>Adaptabilidad</td>
+                <td>El código se adapta fácilmente.</td>
+            </tr>
+
+        </table>
+
+        <h3>Ejemplo de Polimorfismo</h3>
+
+<pre>
+class Perro:
+
+    def hacer_sonido(self):
+        print("Guau Guau")
+
+
+class Gato:
+
+    def hacer_sonido(self):
+        print("Miau")
+
+
+class Vaca:
+
+    def hacer_sonido(self):
+        print("Muuu")
+
+
+animales = [Perro(), Gato(), Vaca()]
+
+for animal in animales:
+    animal.hacer_sonido()
+</pre>
+
+        <h3>Resultado</h3>
+
+<pre>
+Guau Guau
+Miau
+Muuu
+</pre>
+
+        <!-- DIFERENCIAS -->
+
+        <h2>3. Diferencias</h2>
+
+        <table>
+
+            <tr>
+                <th>Herencia</th>
+                <th>Polimorfismo</th>
+            </tr>
+
+            <tr>
+                
+                <td> Hereda características.</td>
+                <td>Permite distintos comportamientos.</td>
+            </tr>
+
+            <tr>
+                <td>Usa clases padre e hija.</td>
+                <td>Usa métodos iguales.</td>
+            </tr>
+
+            <tr>
+                <td>Reutiliza código.</td>
+                <td>Hace el código flexible.</td>
+            </tr>
+
+        </table>
+
+        <!-- CONCLUSION -->
+
+        <h2>4. Conclusión</h2>
+
+        <p>
+            La herencia y el polimorfismo son pilares
+            fundamentales de la Programación Orientada a Objetos.
+        </p>
+
+        <p>
+            Gracias a estos conceptos, los programas son
+            más organizados, reutilizables y fáciles de mantener.
+        </p>
+
+        <footer>
+            Página sobre Herencia y Polimorfismo
+        </footer>
+
+    </div>
+
+</body>
+</html>
